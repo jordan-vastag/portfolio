@@ -57,21 +57,11 @@ export default function Home() {
           </div>
         </div>
       </nav>
-      <div id="splash">
-        
-      </div>
-      <div id="about">
-
-      </div>
-      <div id="projects">
-
-      </div>
-      <div id="resume">
-
-      </div>
-      <div id="about">
-
-      </div>
+      <div id="splash"></div>
+      <div id="about"></div>
+      <div id="projects"></div>
+      <div id="resume"></div>
+      <div id="about"></div>
     </div>
   );
 }
