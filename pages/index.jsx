@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Logo from '../public/placeholder48.png';
-import Navbar from '../components/Navbar';
-import Splash from '../components/Splash';
+import Navbar from '../components/Navbar.jsx';
+import Splash from '../components/page-sections/Splash.jsx';
 
 const navLinks = [
   { text: 'About', id: 'about' },
@@ -12,10 +11,6 @@ const navLinks = [
 ];
 
 function Portfolio() {
-  useEffect(() => {
-    document.title = 'Jordan Vastag Portfolio';
-  }, []);
-
   return (
     <>
       <Head>
@@ -29,6 +24,7 @@ function Portfolio() {
       <div id="top">
         <Navbar id="navbar" logo={Logo} links={navLinks} />
         <Splash id="splash" />
+        <p className="text-xl text-gray-500">lorem ipsum</p>
         {/* <About id="about">
       <Projects id="projects">
       <Resume id="resume">

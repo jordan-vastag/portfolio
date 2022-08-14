@@ -1,4 +1,4 @@
-// /** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -7,10 +7,10 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      darkblue: '#2d4e73',
-      lightblue: '#325c73',
-      darkgreen: '#2e5959',
-      lightgreen: '#3c6960',
+      // darkblue: '#2d4e73',
+      // lightblue: '#325c73',
+      // darkgreen: '#2e5959',
+      // lightgreen: '#3c6960',
     },
   },
   plugins: [],
