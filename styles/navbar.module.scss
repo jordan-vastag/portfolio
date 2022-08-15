@@ -1,0 +1,94 @@
+@import "./variables.scss";
+
+.underlineOnHover {
+  position: relative;
+  color: $text-primary;
+  text-decoration: none;
+}
+
+.underlineOnHover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: $bone;
+  transform-origin: bottom right;
+  transition: transform 0.2s ease-out;
+}
+
+.underlineOnHover:hover::after {
+  color: $bone;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.root {
+  background: $primary;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  .links {
+    display: flex;
+    height: 2em;
+    min-width: min-content;
+    list-style-type: none;
+    padding: 0.5em;
+    margin: 0;
+
+    .left {
+      display: flex;
+      justify-content: flex-start;
+      flex-grow: 1;
+      align-items: center;
+
+      .logo {
+        margin-right: 1%;
+        padding: 5px;
+        cursor: pointer;
+      }
+
+      .spacer {
+        content: "";
+        margin: 0% 0.5%;
+      }
+
+      .link {
+        color: $text-primary;
+        padding: 0.5em 1%;
+      }
+
+      .link:hover {
+        color: $bone;
+      }
+
+      .link:active {
+        background: $secondary;
+      }
+    }
+
+    .right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: max-content;
+      gap: 2%;
+
+      .icon {
+        cursor: pointer;
+      }
+
+      .verticalDivider {
+        height: 2em;
+        width: 1px;
+        background: $text-primary;
+        margin: 0px 5px;
+      }
+    }
+  }
+}

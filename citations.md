@@ -11,6 +11,6 @@ https://icons8.com/icon/xuvGCOXi8Wyg/linkedin
 - Github:
 
 ```
-https://icons8.com/icon/16318/github
+https://icons8.com/icon/zuHqpgzrusU5/github
 ```
 
