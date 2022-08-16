@@ -1,0 +1,25 @@
+@import "../../styles/variables.scss";
+
+.root {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: $text-primary;
+
+  .left {
+    .splashImage {
+      height: 100%;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .hero {
+      color: $text-secondary;
+      font-size: 7vw;
+      text-align: center;
+    }
+  }
+}
