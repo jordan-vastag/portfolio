@@ -1,4 +1,21 @@
 @import "../../styles/variables.scss";
 
+@mixin maxHeightWidth {
+  height: 100%;
+  width: 100%;
+}
+
 .root {
+  height: 95vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .left {
+    @include maxHeightWidth;
+  }
+
+  .right {
+    @include maxHeightWidth;
+  }
 }

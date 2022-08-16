@@ -35,10 +35,10 @@ function Portfolio() {
       <Navbar id="navbar" logo={LogoSmall} links={navLinks} />
       <Splash id="splash" />
       <About id="about" />
-      <Projects id="projects" />
-      <Resume id="resume" />
-      <Contact id="contact" />
-      <Footer id="footer" />
+      {/* <Projects id="projects" /> */}
+      {/* <Resume id="resume" /> */}
+      {/* <Contact id="contact" /> */}
+      {/* <Footer id="footer" /> */}
     </>
   );
 }

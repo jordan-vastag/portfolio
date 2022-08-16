@@ -1,26 +1,16 @@
 @import "../../styles/variables.scss";
 
 .root {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  background-color: $text-primary;
-
-  .left {
-    .splashImage {
-      height: 100%;
-      min-width: 80%;
-      max-width: 90%;
-    }
-  }
-
-  .right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .splashBox {
+    position: relative;
 
     .hero {
-      color: $text-secondary;
-      font-size: 7vw;
+      color: $secondary;
+      position: absolute;
+      width: 100%;
+      top: 10vh;
+      left: 0;
+      font-size: 8vw;
       text-align: center;
     }
   }

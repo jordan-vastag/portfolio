@@ -2,7 +2,7 @@
 
 .underlineOnHover {
   position: relative;
-  color: $text-primary;
+  color: $secondary;
   text-decoration: none;
 }
 
@@ -32,6 +32,7 @@
   top: 0;
   left: 0;
   z-index: 999;
+  border-bottom: 2px solid $secondary;
 
   .links {
     display: flex;
@@ -61,7 +62,7 @@
       }
 
       .link {
-        color: $text-primary;
+        color: $secondary;
         padding: 0.5em 1%;
       }
 
@@ -84,7 +85,7 @@
       .verticalDivider {
         height: 2em;
         width: 1px;
-        background: $text-primary;
+        background: $secondary;
         margin: 0px 5px;
       }
     }

@@ -31,7 +31,7 @@ const Navbar = (props) => {
   // }, []);
 
   return (
-    <nav id="navbar-root" className={styles.root}>
+    <nav className={styles.root}>
       <ul className={styles.links}>
         <div className={styles.left}>
           <Image
@@ -52,6 +52,7 @@ const Navbar = (props) => {
             className={styles.icon}
             href="https://www.github.com/jordan-vastag"
             rel="external"
+            target="_blank"
           >
             <Image
               src={LinkedInIcon}
@@ -67,6 +68,7 @@ const Navbar = (props) => {
             className={styles.icon}
             href="https://www.linkedin.com/in/jordan-vastag"
             rel="external"
+            target="_blank"
           >
             <Image
               src={GithubIcon}
