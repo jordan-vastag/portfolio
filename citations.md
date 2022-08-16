@@ -2,15 +2,6 @@
 
 ## Icons
 
-- Linkedin:
+- [Linkedin](https://icons8.com/icon/xuvGCOXi8Wyg/linkedin)
 
-```
-https://icons8.com/icon/xuvGCOXi8Wyg/linkedin
-```
-
-- Github:
-
-```
-https://icons8.com/icon/zuHqpgzrusU5/github
-```
-
+- [Github](https://icons8.com/icon/zuHqpgzrusU5/github)
