@@ -1,8 +1,9 @@
 import styles from '../styles/navbar.module.scss';
 import Image from 'next/image';
-import scrollTo from '../util/scrollTo';
-import GithubIcon from '../public/github144.png';
-import LinkedInIcon from '../public/linkedin144.png';
+import scrollTo from '../../util/scrollTo';
+import GithubIcon from '../../public/images/github144.png';
+import LinkedInIcon from '../../public/images/linkedin144.png';
+// import { useEffect, useState } from 'react';
 
 const iconSize = 32;
 
@@ -10,7 +11,7 @@ const NavbarLink = (props) => {
   return (
     <a
       href={`#${props.id}`}
-      className={styles.underlineOnHover + ' ' + styles.link}
+      className={`${styles.link} ${styles.underlineOnHover}`}
       onClick={scrollTo(props.id)}
     >
       {props.text}
@@ -19,8 +20,18 @@ const NavbarLink = (props) => {
 };
 
 const Navbar = (props) => {
+  // const [iconSize, setIconSize] = useState();
+  // const [logoHeight, setLogoHeight] = useState();
+  // const [logoWidth, setLogoWidth] = useState();
+
+  // useEffect(() => {
+  //   setIconSize(32);
+  //   setLogoHeight(document.getElementById('navbar-root').height);
+  //   setLogoWidth(document.getElementById('navbar-root').width);
+  // }, []);
+
   return (
-    <nav className={styles.root}>
+    <nav id="navbar-root" className={styles.root}>
       <ul className={styles.links}>
         <div className={styles.left}>
           <Image
@@ -45,6 +56,8 @@ const Navbar = (props) => {
             <Image
               src={LinkedInIcon}
               alt={'LinkedIn logo'}
+              // width={logoHeight}
+              // widht={logoWidth}
               width={iconSize}
               height={iconSize}
             />

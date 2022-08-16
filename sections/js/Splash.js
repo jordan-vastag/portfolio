@@ -1,7 +1,7 @@
-import styles from '../../styles/splash.module.scss';
+import styles from '../styles/splash.module.scss';
 import Image from 'next/image';
-// import AerialSTFC from '../../public/aerial_stfc_cropped.png';
-import DribblingSTFC from '../../public/dribbling_stfc.png';
+import AerialSTFC from '../../public/images/aerial_stfc_cropped.png';
+import DribblingSTFC from '../../public/images/dribbling_stfc.png';
 
 const Splash = () => {
   return (
@@ -15,7 +15,8 @@ const Splash = () => {
         <Image
           className={styles.splashImage}
           src={DribblingSTFC}
-          alt="Jordan jumping to control a soccer ball while an opponent closes down his space."
+          // TODO: better alt text
+          alt="Jordan playing soccer"
         />
       </div>
       <div className={styles.right}>
