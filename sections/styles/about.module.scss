@@ -13,6 +13,13 @@
 
   .left {
     @include maxHeightWidth;
+
+    .title {
+    }
+
+    .body {
+    }
+    text-align: center;
   }
 
   .right {

@@ -1,8 +1,8 @@
 import styles from '../styles/navbar.module.scss';
 import Image from 'next/image';
 import scrollTo from '../../util/scrollTo';
-import GithubIcon from '../../public/images/github144.png';
-import LinkedInIcon from '../../public/images/linkedin144.png';
+import GithubIcon from '../../public/icons/github144.png';
+import LinkedInIcon from '../../public/icons/linkedin144.png';
 // import { useEffect, useState } from 'react';
 
 const iconSize = 32;
@@ -50,7 +50,7 @@ const Navbar = (props) => {
         <div className={styles.right}>
           <a
             className={styles.icon}
-            href="https://www.github.com/jordan-vastag"
+            href="https://github.com/jordan-vastag"
             rel="external"
             target="_blank"
           >
@@ -66,7 +66,7 @@ const Navbar = (props) => {
           <span className={styles.verticalDivider} />
           <a
             className={styles.icon}
-            href="https://www.linkedin.com/in/jordan-vastag"
+            href="https://linkedin.com/in/jordan-vastag"
             rel="external"
             target="_blank"
           >
