@@ -1,28 +1,37 @@
 @import "../../styles/variables.scss";
 
-@mixin maxHeightWidth {
-  height: 100%;
-  width: 100%;
-}
-
 .root {
-  height: 95vh;
   width: 100vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  background: $lightgray;
 
   .left {
-    @include maxHeightWidth;
+    padding: 2vh 4vw;
+    flex-grow: 2;
+    min-width: 50ch;
+    max-width: 60ch;
 
-    .title {
+    .aside {
+      text-align: center;
+      margin: 0.5ch 0ch;
     }
 
     .body {
+      text-indent: 3ch;
+      text-align: justify;
+
+      .emphasize {
+        text-decoration: underline;
+      }
     }
-    text-align: center;
   }
 
   .right {
-    @include maxHeightWidth;
+    padding: 2vh 4vw;
+    flex-grow: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

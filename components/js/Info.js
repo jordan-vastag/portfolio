@@ -1,6 +1,7 @@
 import styles from '../styles/info.module.scss';
 import { useState } from 'react';
 
+// TODO: animated transition between expanded and collapsed
 const Info = (props) => {
   const [expanded, setExpanded] = useState(false);
 

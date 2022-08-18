@@ -81,11 +81,14 @@
 
       .icon {
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .verticalDivider {
         height: 2em;
-        width: 1px;
+        width: 1.5px;
         background: $secondary;
         margin: 0px 5px;
       }

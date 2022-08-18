@@ -1,0 +1,25 @@
+@import "../../styles/variables.scss";
+
+$size: 0.65em;
+
+@mixin indicator-base($opacity) {
+  background: $darkgray;
+  height: $size;
+  width: $size;
+  border-radius: $size;
+  opacity: $opacity;
+}
+
+.root {
+  .indicatorActive {
+    @include indicator-base(0.75);
+  }
+
+  .indicator {
+    @include indicator-base(0.25);
+  }
+
+  .indicator:hover {
+    opacity: 0.5;
+  }
+}

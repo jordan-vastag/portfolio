@@ -1,0 +1,37 @@
+@import "./variables.scss";
+
+html,
+body {
+  margin: 0px;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+
+// TODO: better looking links
+a {
+  color: $primary;
+}
+
+a:hover {
+  color: $darkgray;
+}
+
+h1,
+h2,
+h3 {
+  color: $primary;
+}
+
+h4 {
+  color: $darkgray;
+}
+
+p {
+  color: $darkgray;
+}
+
+hr {
+  width: 105%;
+  margin: 5vh -2.5%;
+  border: 1px solid $darkgray;
+}
