@@ -5,13 +5,20 @@
     position: relative;
 
     .hero {
-      color: $secondary;
+      color: $bone;
       position: absolute;
       width: 100%;
       top: 10vh;
       left: 0;
       font-size: 8vw;
       text-align: center;
+    }
+
+    .info {
+      position: absolute;
+      margin: 1vh 1vh;
+      top: 0;
+      left: 0;
     }
   }
 }

@@ -1,18 +1,27 @@
 import styles from '../styles/navbar.module.scss';
+
+import { useState } from 'react';
+
 import Image from 'next/image';
-import scrollTo from '../../util/scrollTo';
-import GithubIcon from '../../public/images/github144.png';
-import LinkedInIcon from '../../public/images/linkedin144.png';
-// import { useEffect, useState } from 'react';
+import GithubIcon from '../../public/icons/github144.png';
+import LinkedInIcon from '../../public/icons/linkedin144.png';
+import MailIcon from '../../public/icons/mail96.png';
+import PhoneIcon from '../../public/icons/phone96.png';
 
 const iconSize = 32;
+
+const scrollToTop = () => {
+  window.scroll({
+    top: 0,
+    behavior: 'smooth',
+  });
+};
 
 const NavbarLink = (props) => {
   return (
     <a
-      href={`#${props.id}`}
+      href={`#${props.linkTo}`}
       className={`${styles.link} ${styles.underlineOnHover}`}
-      onClick={scrollTo(props.id)}
     >
       {props.text}
     </a>
@@ -20,15 +29,19 @@ const NavbarLink = (props) => {
 };
 
 const Navbar = (props) => {
-  // const [iconSize, setIconSize] = useState();
-  // const [logoHeight, setLogoHeight] = useState();
-  // const [logoWidth, setLogoWidth] = useState();
+  // TODO: show phone number in a rounded pop up box with delay
+  const [showPhoneNumber, setShowPhoneNumber] = useState(false);
 
-  // useEffect(() => {
-  //   setIconSize(32);
-  //   setLogoHeight(document.getElementById('navbar-root').height);
-  //   setLogoWidth(document.getElementById('navbar-root').width);
-  // }, []);
+  // TODO: show email in a rounded pop up box with delay
+  const [showEmail, setShowEmail] = useState(false);
+
+  const toggleShowPhoneNumber = () => {
+    setShowPhoneNumber(!showPhoneNumber);
+  };
+
+  const toggleShowEmail = () => {
+    setShowEmail(!showEmail);
+  };
 
   return (
     <nav className={styles.root}>
@@ -38,35 +51,63 @@ const Navbar = (props) => {
             className={styles.logo}
             src={props.logo}
             alt="logo"
-            onClick={scrollTo('top')}
+            onClick={scrollToTop}
             height={iconSize}
             width={iconSize}
           />
           <span className={styles.spacer} />
           {props.links.map((link, i) => {
-            return <NavbarLink key={i} text={link.text} id={link.id} />;
+            return (
+              <NavbarLink key={i} text={link.text} linkTo={link.section} />
+            );
           })}
         </div>
         <div className={styles.right}>
+          <Image
+            src={PhoneIcon}
+            alt={'Phone icon'}
+            width={24}
+            height={24}
+            onMouseOver={toggleShowPhoneNumber}
+            onMouseOut={toggleShowPhoneNumber}
+          />
+          <span className={styles.verticalDivider} />
           <a
             className={styles.icon}
-            href="https://www.github.com/jordan-vastag"
+            href="mailto:jordanrvastag@gmail.com"
+            rel="external"
+            target="_blank"
+          >
+            <Image
+              src={MailIcon}
+              alt={'Envelope email icon'}
+              width={24}
+              height={24}
+              onMouseOver={toggleShowEmail}
+              onMouseOut={toggleShowEmail}
+            />
+          </a>
+          <span className={styles.verticalDivider} />
+          <a
+            className={styles.icon}
+            href="https://github.com/jordan-vastag"
             rel="external"
             target="_blank"
           >
             <Image
               src={LinkedInIcon}
               alt={'LinkedIn logo'}
-              // width={logoHeight}
-              // widht={logoWidth}
               width={iconSize}
               height={iconSize}
             />
           </a>
           <span className={styles.verticalDivider} />
+          {/* TODO: add linkedin badge on hover */}
+          {/* <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="jordan-vastag" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/jordan-vastag?trk=profile-badge">Jordan Vastag</a></div> */}
+
           <a
             className={styles.icon}
-            href="https://www.linkedin.com/in/jordan-vastag"
+            href="https://linkedin.com/in/jordan-vastag"
             rel="external"
             target="_blank"
           >

@@ -1,0 +1,45 @@
+@import "../../styles/variables.scss";
+
+@mixin flexCentral {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin chevronBox {
+  @include flexCentral;
+  width: 8vw;
+}
+
+.root {
+  display: flex;
+  padding: 5vh 0vw;
+
+  .leftChevronBox {
+    @include chevronBox;
+    margin-right: 4vw;
+
+    .leftChevron:hover {
+      opacity: 0.75;
+    }
+  }
+
+  .center {
+    display: block;
+
+    .slideshowNav {
+      @include flexCentral;
+      gap: 2%;
+      margin: 0.5em 0em;
+    }
+  }
+
+  .rightChevronBox {
+    @include chevronBox;
+    margin-left: 4vw;
+
+    .rightChevron:hover {
+      opacity: 0.75;
+    }
+  }
+}

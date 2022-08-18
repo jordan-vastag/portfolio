@@ -1,0 +1,46 @@
+@import "../../styles/variables.scss";
+$transparentgray: #8888883a;
+
+.root {
+  .icon {
+    height: 3vh;
+    border-radius: 3vh;
+    padding: 0.5vh;
+    opacity: 0.75;
+  }
+
+  .icon:hover {
+    background: $transparentgray;
+  }
+
+  .box {
+    background: $transparentgray;
+    margin: 0.5vh;
+    padding: 1px 2px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    width: max-content;
+
+    .text {
+      flex-grow: 1;
+      color: $secondary;
+      opacity: 0.75;
+      font-size: 0.6rem;
+      margin: 1px;
+    }
+
+    .close {
+      align-self: center;
+      height: 0.6rem;
+      margin: 0.5px;
+    }
+
+    .close:hover {
+      border: 0.5px solid #d6e2e28a;
+      border-radius: 0.25px;
+      margin: none;
+    }
+  }
+}

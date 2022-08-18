@@ -1,3 +1,5 @@
 # Jordan Vastag Portfolio
 
-## Showcasing the work I have done.  
+<!-- TODO: add url once site is hosted -->
+
+[Check it out!]()

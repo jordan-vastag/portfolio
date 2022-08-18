@@ -1,12 +1,12 @@
-import Head from 'next/head';
+import styles from '../styles/index.module.css';
 
 import LogoLarge from '../public/images/logo_large.png';
 import LogoLargeTransparent from '../public/images/logo_large_bgtransparent.png';
 import LogoSmall from '../public/images/logo_small.png';
 
+import Head from 'next/head';
 import Navbar from '../components/js/Navbar.js';
 import Footer from '../components/js/Footer.js';
-
 import Splash from '../sections/js/Splash.js';
 import About from '../sections/js/About.js';
 import Projects from '../sections/js/Projects';
@@ -14,10 +14,10 @@ import Resume from '../sections/js/Resume.js';
 import Contact from '../sections/js/Contact.js';
 
 const navLinks = [
-  { text: 'About', id: 'about' },
-  { text: 'Resumé', id: 'resume' },
-  { text: 'Projects', id: 'projects' },
-  { text: 'Contact', id: 'contact' },
+  { text: 'About', section: 'about' },
+  { text: 'Resumé', section: 'resume' },
+  { text: 'Projects', section: 'projects' },
+  { text: 'Contact', section: 'contact' },
 ];
 
 function Portfolio() {
@@ -31,14 +31,15 @@ function Portfolio() {
         />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
-      <div id="top" />
-      <Navbar id="navbar" logo={LogoSmall} links={navLinks} />
-      <Splash id="splash" />
-      <About id="about" />
-      {/* <Projects id="projects" /> */}
-      {/* <Resume id="resume" /> */}
-      {/* <Contact id="contact" /> */}
-      {/* <Footer id="footer" /> */}
+      <div className={styles.content}>
+        <Navbar name="navbar" id="navbar" logo={LogoSmall} links={navLinks} />
+        <Splash name="splash" id="splash" />
+        <About name="about" id="splash" />
+        <Projects name="projects" id="splash" />
+        <Resume name="resume" id="resume" />
+        <Contact name="contact" id="contact" />
+        <Footer name="footer" id="footer" />
+      </div>
     </>
   );
 }
