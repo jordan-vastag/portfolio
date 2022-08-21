@@ -1,0 +1,29 @@
+@import "../../styles/variables.scss";
+
+.root {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto, 50px);
+
+  .image {
+    grid-area: 1 / 1 / -1;
+  }
+
+  .captionBox {
+    grid-area: 15 / 1 / 4;
+    background: $primary;
+    text-align: center;
+    font-size: 0.75em;
+    color: $secondary;
+    padding: 2% 1%;
+    // opacity: 0.25;
+
+    // .caption {
+    //   width: 100%;
+    //   margin: 0;
+    //   text-align: center;
+    //   font-size: 0.75em;
+    //   color: $secondary;
+    // }
+  }
+}

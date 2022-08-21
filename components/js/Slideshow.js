@@ -2,6 +2,7 @@ import styles from '../styles/slideshow.module.scss';
 import { useState, useEffect } from 'react';
 
 import SlideshowIndicator from './SlideshowIndicator.js';
+import SlideshowImage from './SlideshowImage.js';
 import Image from 'next/image';
 import LeftChevron from '../../public/icons/chevron_left100.png';
 import RightChevron from '../../public/icons/chevron_right100.png';
@@ -13,24 +14,25 @@ import GrandPrismaticSelfie from '../../public/images/grand_prismatic_yellowston
 import LongboardReflectionSelfie from '../../public/images/reflection_with_longboard_at_vikings_stadium.png';
 
 // TODO: fix image scaling so pictures of any size work
-// TODO: once scaling is fixed, add border
+// TODO: once scaling is fixed, add border (outset)
 // NOTE: images are 570x750
 const images = [
   {
     src: GrandPrismaticSelfie,
-    caption: 'lorem ipsum dolor sit amet',
+    caption: 'lorem ipsum dolor amet sit sit amet',
   },
   {
     src: AerialSTFC,
-    caption: 'lorem ipsum dolor sit amet',
+    caption: 'lorem ipsum dolor amet lorem ipsum dol sit amet',
   },
   {
     src: PettingNurseShark,
-    caption: 'lorem ipsum dolor sit amet',
+    caption: 'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
   },
   {
     src: DribblingSTFC,
-    caption: 'lorem ipsum dolor sit amet',
+    caption:
+      'lorem ipsum dolor sit amet amet lorem ipsum dolamet lorem ipsum dolamet lorem ipsum dolamet lorem ipsum dolamet lorem ipsum dol',
   },
   {
     src: LongboardReflectionSelfie,
@@ -40,8 +42,7 @@ const images = [
 
 const Slideshow = (props) => {
   const [idx, setIdx] = useState(0);
-  const [caption, setCaption] = useState(images[0].caption);
-  const [showCaption, setShowCaption] = useState(false);
+
   const [indicators, setIndicators] = useState();
 
   useEffect(() => {
@@ -73,14 +74,6 @@ const Slideshow = (props) => {
     console.log('in handleRightChevronClick, idx set to: ' + idx);
   };
 
-  const handleImageMouseOver = () => {
-    setShowCaption(true);
-  };
-
-  const handleImageMouseOut = () => {
-    setShowCaption(false);
-  };
-
   const handleSlideshowIndicatorClick = (targetIdx) => {
     console.log('in handleSlideShowIndicatorClick');
     setIdx(targetIdx);
@@ -98,13 +91,7 @@ const Slideshow = (props) => {
       </div>
 
       <div className={styles.center}>
-        <Image
-          src={images[idx].src}
-          placeholder="color"
-          onMouseOver={handleImageMouseOver}
-          onMouseOut={handleImageMouseOut}
-        />
-        {/* <div className={styles.caption}>{caption}</div> */}
+        <SlideshowImage src={images[idx].src} caption={images[idx].caption} />
         <div className={styles.slideshowNav}>{indicators}</div>
       </div>
 

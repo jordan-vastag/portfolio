@@ -47,6 +47,7 @@ const About = () => {
         </p>
       </div>
       <div className={styles.right}>
+        {/* TODO: responsive design: once viewport is small enough, stack images in a column instead of a slideshow */}
         <Slideshow />
       </div>
     </div>

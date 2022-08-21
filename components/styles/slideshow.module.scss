@@ -25,8 +25,6 @@
   }
 
   .center {
-    display: block;
-
     .slideshowNav {
       @include flexCentral;
       gap: 2%;
