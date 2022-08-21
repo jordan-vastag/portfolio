@@ -1,4 +1,18 @@
 @import "../../styles/variables.scss";
 
 .root {
+  padding: 0vh 4vw;
+  padding-bottom: 3vh;
+  background: $lightgray;
+
+  .title {
+    margin-top: 0px;
+  }
+
+  .gallery {
+    display: grid;
+    // grid-template-columns: repeat(auto-fill, auto);
+    justify-content: space-evenly;
+    gap: 3vw;
+  }
 }

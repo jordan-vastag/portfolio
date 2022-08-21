@@ -1,7 +1,7 @@
-import styles from '../styles/slideshow-image.module.scss';
+import styles from "../styles/slideshow-image.module.scss";
 
-import { useState } from 'react';
-import Image from 'next/image';
+import { useState } from "react";
+import Image from "next/image";
 
 const SlideshowImage = (props) => {
   const [showCaption, setShowCaption] = useState(false);
@@ -24,6 +24,7 @@ const SlideshowImage = (props) => {
         onMouseOver={handleImageMouseOver}
         onMouseOut={handleImageMouseOut}
       />
+      {/* TODO: animate this */}
       {/* { showCaption && (
         <div className={styles.captionBox}>
         {props.caption}

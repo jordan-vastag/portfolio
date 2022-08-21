@@ -1,0 +1,13 @@
+@import "../../styles/variables.scss";
+
+.root {
+  display: flex;
+
+  .left {
+  }
+
+  .right {
+    padding: 0ch 2ch;
+    width: 50ch;
+  }
+}
