@@ -75,9 +75,9 @@ const Slideshow = (props) => {
     console.log('in handleRightChevronClick, idx set to: ' + idx);
   };
 
-  const handleSlideshowIndicatorClick = (event) => {
-    // console.log(event.dataset.idx);
-    // setIdx(___);
+  const handleSlideshowIndicatorClick = (e) => {
+    const targetIdx = Number(e.target.dataset.idx);
+    setIdx(targetIdx);
   };
 
   return (

@@ -4,13 +4,14 @@ const SlideshowIndicator = (props) => {
   return (
     <div className={styles.root}>
       {props.isActive && (
-        <div
-          className={styles.indicatorActive}
-          // onClick={}
-        />
+        <div data-idx={props.idx} className={styles.indicatorActive} />
       )}
       {!props.isActive && (
-        <div className={styles.indicator} onClick={props.onClick} />
+        <div
+          data-idx={props.idx}
+          className={styles.indicator}
+          onClick={(e) => props.onClick(e)}
+        />
       )}
     </div>
   );
