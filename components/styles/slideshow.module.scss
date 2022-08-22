@@ -13,11 +13,9 @@
 
 .root {
   display: flex;
-  padding: 5vh 0vw;
 
   .leftChevronBox {
     @include chevronBox;
-    margin-right: 4vw;
 
     .leftChevron:hover {
       opacity: 0.75;
@@ -28,13 +26,11 @@
     .slideshowNav {
       @include flexCentral;
       gap: 2%;
-      margin: 0.5em 0em;
     }
   }
 
   .rightChevronBox {
     @include chevronBox;
-    margin-left: 4vw;
 
     .rightChevron:hover {
       opacity: 0.75;

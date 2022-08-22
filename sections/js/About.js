@@ -11,8 +11,11 @@ const About = () => {
           <span className={styles.emphasize}>
             I'm an aspiring full-stack developer with a passion for learning.
           </span>{' '}
-          I'm a senior in the esteemed College of Science and Engineering at the
-          University of Minnesota located in Minneapolis, MN.
+          I'm a senior in the College of Science and Engineering at the
+          University of Minnesota located in Minneapolis, MN. I have project
+          experience ranging from working at a low level in assembly to working
+          at a high level developing full stack web applications with modern
+          technologies.
         </p>
         {/* TODO: add logos of technologies I've used */}
         {/* <br /> */}
@@ -47,7 +50,6 @@ const About = () => {
         </p>
       </div>
       <div className={styles.right}>
-        {/* TODO: responsive design: once viewport is small enough, stack images in a column instead of a slideshow */}
         <Slideshow />
       </div>
     </div>

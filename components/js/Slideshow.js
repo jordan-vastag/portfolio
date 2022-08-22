@@ -13,6 +13,7 @@ import PettingNurseShark from '../../public/images/petting_nurse_shark_florida_k
 import GrandPrismaticSelfie from '../../public/images/grand_prismatic_yellowstone.png';
 import LongboardReflectionSelfie from '../../public/images/reflection_with_longboard_at_vikings_stadium.png';
 
+// TODO: responsive-fy component
 // TODO: fix image scaling so pictures of any size work
 // TODO: once scaling is fixed, add border (outset)
 // NOTE: images are 570x750
@@ -74,9 +75,9 @@ const Slideshow = (props) => {
     console.log('in handleRightChevronClick, idx set to: ' + idx);
   };
 
-  const handleSlideshowIndicatorClick = (targetIdx) => {
-    console.log('in handleSlideShowIndicatorClick');
-    setIdx(targetIdx);
+  const handleSlideshowIndicatorClick = (event) => {
+    // console.log(event.dataset.idx);
+    // setIdx(___);
   };
 
   return (

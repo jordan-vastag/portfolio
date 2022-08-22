@@ -10,10 +10,7 @@ const SlideshowIndicator = (props) => {
         />
       )}
       {!props.isActive && (
-        <div
-          className={styles.indicator}
-          // onClick={}
-        />
+        <div className={styles.indicator} onClick={props.onClick} />
       )}
     </div>
   );
