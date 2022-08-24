@@ -1,5 +1,6 @@
-import styles from '../styles/index.module.css';
+import styles from '../styles/index.module.scss';
 
+// TODO: update small logo to just be stylized letters JV
 import LogoLarge from '../public/images/logo_large.png';
 import LogoLargeTransparent from '../public/images/logo_large_bgtransparent.png';
 import LogoSmall from '../public/images/logo_small.png';
@@ -31,13 +32,15 @@ function Portfolio() {
         />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.content}>
+      <div className={styles.root}>
         <Navbar name="navbar" id="navbar" logo={LogoSmall} links={navLinks} />
         <Splash name="splash" id="splash" />
-        <About name="about" id="splash" />
-        <Projects name="projects" id="splash" />
-        <Resume name="resume" id="resume" />
-        <Contact name="contact" id="contact" />
+        <div className={styles.content}>
+          <About name="about" id="splash" />
+          <Projects name="projects" id="splash" />
+          <Resume name="resume" id="resume" />
+          <Contact name="contact" id="contact" />
+        </div>
         <Footer name="footer" id="footer" />
       </div>
     </>

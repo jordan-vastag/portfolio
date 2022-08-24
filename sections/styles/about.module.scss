@@ -1,12 +1,12 @@
 @import "../../styles/variables.scss";
 
 .root {
-  width: 100vw;
+  width: calc(100vw - $px * 2);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(45ch, 60ch));
-  justify-content: space-evenly;
+  justify-content: space-between;
   background: $lightgray;
-  padding: $py $px;
+  padding: $py 0vw;
 
   .left {
     .aside {
@@ -15,7 +15,7 @@
     }
 
     .body {
-      text-indent: 3ch;
+      text-indent: $text-indent;
       text-align: justify;
 
       .emphasize {

@@ -1,0 +1,10 @@
+@import "./variables.scss";
+
+/* TODO: make zoom make sense */
+.root {
+}
+
+.content {
+  padding: 0vh $px;
+  background: $lightgray;
+}

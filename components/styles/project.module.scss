@@ -1,13 +1,20 @@
 @import "../../styles/variables.scss";
+@import "../../sections/styles/projects.module.scss";
 
 .root {
   display: flex;
+  flex-direction: column;
+  padding: 0vh 0vw;
 
-  .left {
+  .header {
+    .badgeBox {
+      display: flex;
+      gap: 2px;
+    }
   }
 
-  .right {
-    padding: 0ch 2ch;
-    width: 50ch;
+  .body {
+    text-indent: $text-indent;
+    text-align: justify;
   }
 }
