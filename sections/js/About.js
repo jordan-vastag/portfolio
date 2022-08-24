@@ -5,8 +5,8 @@ const About = () => {
   return (
     <div className={styles.root}>
       <div className={styles.left}>
-        <h2 className={styles.title}>Who am I?</h2>
-        <h4>The elevator pitch:</h4>
+        <h1 className={styles.title}>Who am I?</h1>
+        <h2>The elevator pitch:</h2>
         <p className={styles.body}>
           <span className={styles.emphasize}>
             I'm an aspiring full-stack developer with a passion for learning.
@@ -18,7 +18,6 @@ const About = () => {
           technologies.
         </p>
         {/* TODO: add logos of technologies I've used */}
-        {/* <br /> */}
         <p className={styles.aside}>Want to learn more?</p>
         <p className={styles.aside}>
           Check out my <a href="#projects">projects</a> or my{' '}
@@ -32,7 +31,7 @@ const About = () => {
           .
         </p>
         <hr />
-        <h4>The good stuff:</h4>
+        <h2>The good stuff:</h2>
         <p className={styles.body}>
           Outside of work I love to get active — preferably outdoors — in any
           way I can. I play soccer, mountain and road bike, rock climb, hike,
@@ -50,6 +49,7 @@ const About = () => {
         </p>
       </div>
       <div className={styles.right}>
+        {/* TODO: responsive-fy: slideshow if minimal space, otherwise fill space image grid */}
         <Slideshow />
       </div>
     </div>
