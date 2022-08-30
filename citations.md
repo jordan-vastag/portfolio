@@ -38,10 +38,16 @@ Path: /public/icons/badges
 
 - [Lucidchart](https://cdn-cashy-static-assets.lucidchart.com/marketing/images/Lucidchart_favicon_full_96x96.png)
 
-- []()
+- [SQL Server](https://www.cleanpng.com/png-microsoft-sql-server-sql-server-management-studio-3467355/)
 
-- []()
+- [SQLite](https://logos-download.com/31929-sqlite-logo-download.html)
 
-## Logo
+- [Spring](https://dwglogo.com/wp-content/uploads/2017/12/Spring_Framework_logo_01.png)
+
+- [Lombok](https://projectlombok.org/favicon.ico)
+
+- [Maven](https://upload.wikimedia.org/wikipedia/commons/5/52/Apache_Maven_logo.svg)
+
+## Site Logo
 
 - [Canva](https://canva.com)

@@ -2,16 +2,16 @@ import styles from '../styles/project.module.scss';
 import Image from 'next/image';
 
 const badgeSrc = [
-  { React: '/badges' },
-  { JS: '/badges' },
-  { HTML: '/badges' },
-  { Java: '/badges' },
-  // { Lombok: '/badges' },
-  // { 'Spring Boot': '/badges' },
-  // { 'SQL Server': '/badges' },
-  // { SQLite: '/badges' },
-  // { Lucidchart: '/badges' },
-  { Jira: '/badges' },
+  { React: '/badges/react100.png' },
+  { JS: '/badges/javascript100.png' },
+  { HTML: '/badges/html100.png' },
+  { Java: '/badges/java100.png' },
+  { Lombok: '/badges/lombok.png' },
+  { Spring: '/badges/spring.png' },
+  { 'SQL Server': '/badges/sql-server690.png' },
+  { SQLite: '/badges/sqlite.png' },
+  { Lucidchart: '/badges/lucidchart96.png' },
+  { Jira: '/badges/jira100.png' },
 ];
 
 const Project = (props) => {
