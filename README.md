@@ -2,4 +2,4 @@
 
 <!-- TODO: add url once site is hosted -->
 
-[Check it out!]()
+WIP - never finished
